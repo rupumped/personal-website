@@ -15,7 +15,7 @@ except:
 
 with open('NICHOLAS S SELBY - Home.html') as index:
 	content = index.read()
-'''
+
 # Add newline before header
 content = content[:content.index('<head>')] + '\n' + content[content.index('<head>'):]
 
@@ -24,7 +24,7 @@ content = content[:content.index('<head>')+6] + content[content.index('<title>')
 
 # Add newline before title
 content = content[:content.index('<title>')] + '\n' + content[content.index('<title>'):]
-'''
+
 # Retitle
 content = content.replace('NICHOLAS S SELBY - Home','Nicholas S Selby', 1)
 
@@ -40,7 +40,7 @@ content = content.replace('NICHOLAS%20S%20SELBY%20-%20Home_files','resources')
 # Rename url
 content = content.replace('https://nicholassselby.weebly.com','http://www.mit.edu/~nselby')
 content = content.replace('nicholassselby.weebly.com','www.mit.edu/~nselby')
-'''
+
 # Remove footer
 content = content[:content.index('<div class="footer-wrap"')] + '\n</div>\n' + content[content.index('<div class="nav mobile-nav"'):]
 
@@ -53,6 +53,6 @@ content = content[:content.index('<div id="customer-accounts-app"')] + content[c
 
 # Remove signup
 content = content[:content.index('<div id="wsite-menus"')] + content[content.index('</body>'):]
-'''
+
 with open('index.html','w') as index:
 	index.write(content)
