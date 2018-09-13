@@ -34,7 +34,7 @@ content = re.sub(p_footCont,r'\1',content)
 oldResources = fn.replace(' ','%20').replace('.html','') + '_files'
 content = content.replace(oldResources,'resources')
 content = re.sub(p_uploads,'resources/',content)
-content = re.sub(r'"url":"[\d/]+(/[^/]+\.[^"]+)',r'"url":"~nselby/resources\1',content)
+content = re.sub(r'"url":"[\d/\\]+(/[^/]+\.[^"]+)',r'"url":"~nselby/resources\1',content)
 content = content.replace(r'style="background-image: url(&quot;/resources/',r'style="background-image: url(&quot;/~nselby/resources/')
 
 # YouTube
