@@ -35,5 +35,9 @@ content = re.sub(p_uploads,'resources/',content)
 if 'Home' in args.filename:
 	content = content.replace('rfly.txt','drone_relays_for_battery-free_networks.pdf')
 
-with open(args.filename.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower(),'w') as fh:
+fn = args.filename.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
+fn = fn[fn.index('/')+1:]
+if fn.endswith('home.html'):
+	fn = 'index.html'
+with open(fn,'w') as fh:
 	fh.write(content)
