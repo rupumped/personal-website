@@ -1584,12 +1584,12 @@
 
             function h(n) {
                 var t = n.previewUrl || n.url;
-                return t ? (n.previewUrl || t.match("/weebly/images/") || t.match("x-com-weebly-images") || (t = '/' + t.replace(/^\/uploads\//, "")), window.inEditor && window.inEditor() && i.chromeless && t.startsWith("/") && (t = "http://" + window.configSiteName + t), t) : v(n)
+                return t ? (n.previewUrl || t.match("/weebly/images/") || t.match("x-com-weebly-images") || (t = t.replace(/^\/uploads\//, "")), window.inEditor && window.inEditor() && i.chromeless && t.startsWith("/") && (t = "http://" + window.configSiteName + t), t) : v(n)
             }
 
             function v(n) {
                 var t = window.inEditor && window.inEditor() ? n.editorUrl || n.url : n.publishedUrl || n.url;
-                return t ? (n.editorUrl || t.match("/weebly/images/") || t.match("x-com-weebly-images") || (t = '/' + t.replace(/^\/uploads\//, ""), n.thumbnail !== !1 && (t = t.replace(/^(.*)\.([^\.]+)$/, "$1_orig.$2"))), window.inEditor && window.inEditor() && i.chromeless && t.startsWith("/") && (t = "http://" + window.configSiteName + t), t) : ""
+                return t ? (n.editorUrl || t.match("/weebly/images/") || t.match("x-com-weebly-images") || (t = t.replace(/^\/uploads\//, ""), n.thumbnail !== !1 && (t = t.replace(/^(.*)\.([^\.]+)$/, "$1_orig.$2"))), window.inEditor && window.inEditor() && i.chromeless && t.startsWith("/") && (t = "http://" + window.configSiteName + t), t) : ""
             }
 
             function w(n, t, e) {
