@@ -10,7 +10,7 @@ p_title = re.compile(r'(<title>.*)NICHOLAS S SELBY(.*</title>)',re.DOTALL)
 p_footer = re.compile(r'<div class="footer-wrap".+</div><!-- end footer-wrap -->',re.DOTALL)
 p_footCont = re.compile(r'<div id="wsite-menus">.*</div>(</body></html>)',re.DOTALL)
 p_uploads = re.compile(r'uploads/[\d/]*(?:published/|editor/|background-images/)?',re.DOTALL)
-p_youtube = re.compile(r'<div class="wsite-youtube".*?<iframe src="resources/([\w]+)\.html".*?</div>.*?</div>.*?</div>',re.DOTALL)
+p_youtube = re.compile(r'<div class="wsite-youtube".*?<iframe src="resources/([\w\-]+)\.html".*?</div>.*?</div>.*?</div>',re.DOTALL)
 
 fn = args.filename
 fn = fn[fn.index('/')+1:]
