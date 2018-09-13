@@ -11,6 +11,9 @@ p_footer = re.compile(r'<div class="footer-wrap".+</div><!-- end footer-wrap -->
 p_footCont = re.compile(r'<div id="wsite-menus">.*</div>(</body></html>)',re.DOTALL)
 p_uploads = re.compile(r'uploads/[\d/]*(?:published/|editor/|background-images/)?',re.DOTALL)
 
+fn = args.filename
+fn = fn[fn.index('/')+1:]
+
 with open(args.filename) as fh:
 	content = fh.read()
 
@@ -27,16 +30,16 @@ content = re.sub(p_footer,'',content)
 content = re.sub(p_footCont,r'\1',content)
 
 # Rename Resources
-oldResources = args.filename.replace(' ','%20').replace('.html','') + '_files'
+oldResources = fn.replace(' ','%20').replace('.html','') + '_files'
 content = content.replace(oldResources,'resources')
 content = re.sub(p_uploads,'resources/',content)
+content = re.sub(r'"url":"[\d/]+(/[^/]+\.[^"]+)',r'"url":"resources\1',content)
 
 # Link RFly
-if 'Home' in args.filename:
+if 'Home' in fn:
 	content = content.replace('rfly.txt','drone_relays_for_battery-free_networks.pdf')
 
-fn = args.filename.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
-fn = fn[fn.index('/')+1:]
+fn = fn.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
 if fn.endswith('home.html'):
 	fn = 'index.html'
 with open(fn,'w') as fh:
