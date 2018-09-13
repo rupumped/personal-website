@@ -11,6 +11,7 @@ p_footer = re.compile(r'<div class="footer-wrap".+</div><!-- end footer-wrap -->
 p_footCont = re.compile(r'<div id="wsite-menus">.*</div>(</body></html>)',re.DOTALL)
 p_uploads = re.compile(r'uploads/[\d/]*(?:published/|editor/|background-images/)?',re.DOTALL)
 p_youtube = re.compile(r'<div class="wsite-youtube".*?<iframe src="resources/([\w\-]+)\.html".*?</div>.*?</div>.*?</div>',re.DOTALL)
+p_selectedWork0 = re.compile(r'(<div class="wsite-image[^"]*)(".*?alt="Picture")(.*?</a>)(.*?</div>.*?</div>.*?</div>)',re.DOTALL)
 
 fn = args.filename
 fn = fn[fn.index('/')+1:]
@@ -46,6 +47,18 @@ content = re.sub(p_youtube, yt_replace, content)
 # Link RFly
 if 'Home' in fn:
 	content = content.replace('rfly.txt','drone_relays_for_battery-free_networks.pdf')
+if 'Selected' in fn:
+	content = re.sub(p_selectedWork0, r'\1 selected-work-container \2  class="selected-work-image" \3 <div class="selected-work-overlay">RUPUMPED</div> \4', content)
+	content = content.replace('</head>','\n<link href="resources/selected-work.css" rel="stylesheet" type="text/css">\n</head>')
+	content = content.replace('RUPUMPED','#robotics #advanced-manufacturing #education', 1)
+	content = content.replace('RUPUMPED','#acoustics #signal-processing #structures', 1)
+	content = content.replace('RUPUMPED','#distributed-systems #networking', 1)
+	content = content.replace('RUPUMPED','#rfid #networking #artificial-intelligence', 1)
+	content = content.replace('RUPUMPED','#quantum #design', 1)
+	content = content.replace('RUPUMPED','#solar #racecar #leadership', 1)
+	content = content.replace('RUPUMPED','#rfid #drones #networking', 1)
+	content = content.replace('RUPUMPED','#drones #artificial-intelligence #global-health', 1)
+	content = content.replace('RUPUMPED','#global-health #humanitarian', 1)
 
 fn = fn.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
 if fn.endswith('home.html'):

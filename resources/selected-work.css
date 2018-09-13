@@ -1,0 +1,24 @@
+.selected-work-container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.selected-work-image {
+  box-sizing: border-box;
+  display: block;
+}
+
+.selected-work-overlay {
+  box-sizing: border-box;
+  position: absolute; 
+  bottom: 10px; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  opacity:1;
+  color: white;
+  font-size: 12px;
+  padding-left: 5px;
+  text-align: left;
+}
