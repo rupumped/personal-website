@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script async="" src="resources/snowday262.js"></script><script type="text/javascript" async="" src="resources/ga.js"></script><script type="text/javascript" id="zb-embed-code" async="" src="resources/widgets.js"></script><script async="" src="resources/snowday261.js"></script><script src="resources/gdprscript.js"></script><style id="zoomLevel-styles"></style><script src="resources/gdprscript_002.js"></script>
+<html lang="en"><head><script type="text/javascript" id="zb-embed-code" data-cfasync="false" src="resources/widgets.js"></script><script async="" src="resources/snowday262.js"></script><script type="text/javascript" async="" src="resources/ga.js"></script><script type="text/javascript" id="zb-embed-code" async="" src="resources/widgets_002.js"></script><script async="" src="resources/snowday261.js"></script><script src="resources/gdprscript.js"></script><style id="zoomLevel-styles"></style>
 		<title>Nondestructive Testing - Nicholas S Selby</title><meta property="og:site_name" content="Nicholas S Selby">
 <meta property="og:title" content="Nondestructive Testing">
 <meta property="og:description" content="​Signal Processing">
@@ -17,14 +17,14 @@
 <link rel="stylesheet" type="text/css" href="resources/fancybox.css">
 <link rel="stylesheet" type="text/css" href="resources/social-icons.css" media="screen,projection">
 <link rel="stylesheet" type="text/css" href="resources/main_style.css" title="wsite-theme-css">
-<link href="resources/css_004.css" rel="stylesheet" type="text/css">
+<link href="resources/css_002.css" rel="stylesheet" type="text/css">
 <link href="resources/css_003.css" rel="stylesheet" type="text/css">
 
-<link href="resources/css_002.css" rel="stylesheet" type="text/css">
-<link href="resources/css.css" rel="stylesheet" type="text/css">
-<link href="resources/css.css" rel="stylesheet" type="text/css">
 <link href="resources/css_005.css" rel="stylesheet" type="text/css">
-<link href="resources/css_002.css" rel="stylesheet" type="text/css">
+<link href="resources/css.css" rel="stylesheet" type="text/css">
+<link href="resources/css.css" rel="stylesheet" type="text/css">
+<link href="resources/css_004.css" rel="stylesheet" type="text/css">
+<link href="resources/css_005.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Questrial" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
@@ -407,8 +407,8 @@ transducers for their low cost and greater robustness to surface
 conditions. By moving the transducer off of direct contact with the part
  being tested, we no longer need to worry about ensuring perfect 
 coupling between the face of the transducer and the material surface. 
-However, air-coupled transducers require precise calibration to work, 
-and there exists no method to do so in the field.</div>
+However, air-coupled transducers require performing a precise 
+calibration to work, and there exists no method to do so in the field.<br></div>
 <hr style="width: 100%; clear: both; visibility: hidden; font-size: 16px !important;">
 
 <h2 class="wsite-content-title" style="font-size: 30px !important; line-height: 36px !important;">Nonlinearity</h2>
@@ -419,12 +419,13 @@ called "nonlinearities" transfer some of the acoustic energy in the
 fundamental frequency of the wave into harmonics. Simply put, if a 2 MHz
  wave enters a damaged material, nonlinearities in the material will 
 generate a second acoustic wave at 4 MHz, twice the frequency of the 
-input wave. The strength of the generated harmonic relative to the 
-fundamental tells us how damaged, or nonlinear, the material is. When a 
-transducer produces an acoustic wave at one end of an object, we model 
-the wave as a sum of Gaussians which each propagate through the material
- as Gaussians, picking up nonlinearity as they travel. By measuring the 
-accumulated nonlinearity, we can calculate how damaged the material is.</div>
+input wave. The strength of the generated harmonic relative to that of 
+the fundamental tells us how damaged, or nonlinear, the material is. 
+When a transducer produces an acoustic wave at one end of an object, we 
+model the wave as a sum of Gaussians which each propagate through the 
+material as Gaussians, picking up nonlinearity as they travel. By 
+measuring the accumulated nonlinearity, we can calculate how damaged the
+ material is.<br></div>
 
 <h2 class="wsite-content-title" style="font-size: 30px !important; line-height: 36px !important;">Solution</h2>
 
@@ -436,16 +437,17 @@ modelling technique to analytically determine the magnitude of both the
 fundamental and harmonic components at the opposite surface. To confirm 
 our model, we used a laser interferometer to measure the physical 
 surface displacement. After confirming our model, we then repeated the 
-experiment replacing the laser interferometer with an air-coupled 
-transducer. By propagating the model from the surface of the material 
-through the air to the transducer, we could directly link the transducer
- output in Volts to the physical strength of the propagating waves. This
- experimental voltage-to-pressure mapping is unique to the transducer 
-and can be used in future experiments to easily determine material 
-nonlinearity.<br><br>Our method worked! We tested the calibration on two
- common materials, aluminum and silicon, and were able to determine the 
-nonlinearity of both materials to high accuracy. I presented our 
-methodology at the&nbsp;<em style="font-size: 21px !important; line-height: 30px !important;">Review of Progress in Quantitative Nondestructive Evaluation</em>&nbsp;conference and we published our work in the journal&nbsp;<em style="font-size: 21px !important; line-height: 30px !important;">Ultrasonics</em>. You can download our paper <a href="http://www.mit.edu/~nselby/resources/determination_of_absolute_material_nonlinearity_with_air-coupled_ultrasonic_receivers.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a> and my poster <a href="http://www.mit.edu/~nselby/resources/qnde.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a>.</div>
+experiment replacing the laser interferometer with a much less 
+expensive, but uncalibrated, air-coupled transducer. By propagating the 
+model from the surface of the material through the air to the 
+transducer, we could directly link the transducer output in Volts to the
+ physical strength of the propagating waves. This experimental 
+voltage-to-pressure mapping is unique to the transducer and can be used 
+in future experiments to easily determine material nonlinearity.<br><br>Our
+ method worked! We tested the calibration on two common materials, 
+aluminum and silicon, and were able to determine the nonlinearity of 
+both materials to high accuracy. I presented our methodology at 
+the&nbsp;<em style="font-size: 21px !important; line-height: 30px !important;">Review of Progress in Quantitative Nondestructive Evaluation</em>&nbsp;conference and we published our work in the journal&nbsp;<em style="font-size: 21px !important; line-height: 30px !important;">Ultrasonics</em>. You can download our paper <a href="http://www.mit.edu/~nselby/resources/determination_of_absolute_material_nonlinearity_with_air-coupled_ultrasonic_receivers.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a> and my poster <a href="http://www.mit.edu/~nselby/resources/qnde.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a>.<br></div>
 <hr style="width: 100%; clear: both; visibility: hidden; font-size: 16px !important;">
 			</div>
 		</div>
