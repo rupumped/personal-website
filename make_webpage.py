@@ -11,7 +11,8 @@ p_footer = re.compile(r'<div class="footer-wrap".+</div><!-- end footer-wrap -->
 p_footCont = re.compile(r'<div id="wsite-menus">.*</div>(</body></html>)',re.DOTALL)
 p_uploads = re.compile(r'uploads/[\d/]*(?:published/|editor/|background-images/)?',re.DOTALL)
 p_youtube = re.compile(r'<div class="wsite-youtube".*?<iframe src="resources/([\w\-]+)\.html".*?</div>.*?</div>.*?</div>',re.DOTALL)
-p_selectedWork0 = re.compile(r'(<div class="wsite-image[^"]*)(".*?alt="Picture")(.*?</a>)(.*?</div>.*?</div>.*?</div>)',re.DOTALL)
+p_selectedWork = re.compile(r'(<div class="wsite-image[^"]*)(".*?alt="Picture")(.*?</a>)(.*?</div>.*?</div>.*?</div>)',re.DOTALL)
+p_publication = re.compile(r'<div class="wsite-spacer".+?(<div class="paragraph)',re.DOTALL)
 
 fn = args.filename
 fn = fn[fn.index('/')+1:]
@@ -44,12 +45,21 @@ yt_replace = r'''<div style="position: relative; width: 100%; height: 0; padding
 </div>'''
 content = re.sub(p_youtube, yt_replace, content)
 
-# Link RFly
+# Add Custom CSS
+content = content.replace('</head>','\n<link href="resources/rupumped.css" rel="stylesheet" type="text/css">\n</head>')
+
 if 'Home' in fn:
+	# Link RFly
 	content = content.replace('rfly.txt','drone_relays_for_battery-free_networks.pdf')
+	# Vertically center publications
+	indexOfPublications = content.index('Publications')
+	contentPostPubs = content[indexOfPublications:]
+	contentPostPubs = re.sub(p_publication, r'\1 home-publication', contentPostPubs)
+	content = content[:indexOfPublications-1] + contentPostPubs
 if 'Selected' in fn:
-	content = re.sub(p_selectedWork0, r'\1 selected-work-container \2  class="selected-work-image" \3 <div class="selected-work-overlay">RUPUMPED</div> \4', content)
-	content = content.replace('</head>','\n<link href="resources/selected-work.css" rel="stylesheet" type="text/css">\n</head>')
+	# Add Overlays
+	content = re.sub(p_selectedWork, r'\1 selected-work-container \2  class="selected-work-image" \3 <div class="selected-work-overlay">RUPUMPED</div> \4', content)
+	content = content.replace('</head>','\n<link href="resources/rupumped.css" rel="stylesheet" type="text/css">\n</head>')
 	content = content.replace('RUPUMPED','#robotics #advanced-manufacturing #education', 1)
 	content = content.replace('RUPUMPED','#acoustics #signal-processing #structures', 1)
 	content = content.replace('RUPUMPED','#distributed-systems #networking', 1)
