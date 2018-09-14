@@ -58,7 +58,7 @@ if 'Home' in fn:
 	indexOfPublications = content.index('Publications')
 	contentPostPubs = content[indexOfPublications:]
 	contentPostPubs = re.sub(p_publication, r'\1 home-publication', contentPostPubs)
-	content = content[:indexOfPublications-1] + contentPostPubs
+	content = content[:indexOfPublications] + contentPostPubs
 if 'Selected' in fn:
 	# Add Overlays
 	content = re.sub(p_selectedWork, r'\1 selected-work-container \2  class="selected-work-image" \3 <div class="selected-work-overlay">RUPUMPED</div> \4', content)
