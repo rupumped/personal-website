@@ -24,6 +24,9 @@ with open(args.filename) as fh:
 content = re.sub(p_title,r'\1Nicholas S Selby\2',content)
 content = content.replace('content="NICHOLAS S SELBY"', 'content="Nicholas S Selby"')
 
+# Adjust Font Size of Title
+content = re.sub(r'(<span id="wsite-title")[^>]*>',r'\1>',content)
+
 # Rename URL
 content = content.replace('https://nicholassselby.weebly.com','http://www.mit.edu/~nselby')
 content = content.replace('nicholassselby.weebly.com','www.mit.edu/~nselby')

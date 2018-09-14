@@ -23,10 +23,12 @@
   text-align: left;
 }
 
-.home-publication {
-  position: absolute;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+@media screen and (mid-width: 400px) {
+  .home-publication {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
