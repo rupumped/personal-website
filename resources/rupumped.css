@@ -23,7 +23,7 @@
   text-align: left;
 }
 
-@media screen and (mid-width: 400px) {
+@media screen and (min-width: 400px) {
   .home-publication {
     position: absolute;
     top: 50%;
