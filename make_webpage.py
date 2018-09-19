@@ -72,6 +72,9 @@ if 'Selected' in fn:
 	content = content.replace('RUPUMPED','#rfid #drones #networking', 1)
 	content = content.replace('RUPUMPED','#drones #artificial-intelligence #global-health', 1)
 	content = content.replace('RUPUMPED','#global-health #humanitarian', 1)
+if 'About' in fn:
+	content = content.replace('alt','title')
+
 
 fn = fn.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
 if fn.endswith('home.html'):
