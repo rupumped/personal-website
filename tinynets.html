@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script type="text/javascript" id="zb-embed-code" data-cfasync="false" src="resources/widgets_002.js"></script><script async="" src="resources/snowday262.js"></script><script type="text/javascript" async="" src="resources/ga.js"></script><script type="text/javascript" id="zb-embed-code" async="" src="resources/widgets.js"></script><script async="" src="resources/snowday261.js"></script><script src="resources/gdprscript.js"></script><style id="zoomLevel-styles"></style>
+<html lang="en"><head><script async="" src="resources/snowday262.js"></script><script type="text/javascript" async="" src="resources/ga.js"></script><script type="text/javascript" id="zb-embed-code" async="" src="resources/widgets.js"></script><script async="" src="resources/snowday261.js"></script><script src="resources/gdprscript.js"></script><style id="zoomLevel-styles"></style>
 		<title>TinyNets - Nicholas S Selby</title><meta property="og:site_name" content="Nicholas S Selby">
 <meta property="og:title" content="TinyNets">
 <meta property="og:description" content="Networking">
@@ -395,7 +395,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <h2 class="wsite-content-title" style="font-size: 30px !important; line-height: 36px !important;">Motivation</h2>
 
-<div class="paragraph" style="font-size: 21px !important; line-height: 30px !important;">The
+<div class="paragraph" style="text-align: justify; font-size: 21px !important; line-height: 30px !important;">The
  field of Networked Control Systems, or NCS, is unique from many other 
 networking fields. NCS refers to any application where many devices are 
 linked together to perform control of a physical system. They are common
@@ -449,7 +449,7 @@ systems.<br></div>
 <h2 class="wsite-content-title" style="font-size: 30px !important; line-height: 36px !important;">Solution</h2>
 
 <span class="imgPusher" style="float: right; height: 320px; font-size: 16px !important;"></span><span style="display: table; width: 380px; position: relative; float: right; max-width: 100%; clear: right; margin-top: 20px; font-size: 16px !important; line-height: 25px !important;"><a style="font-size: 16px !important;"><img src="resources/hardware-12-routers.jpg" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image"></a><span style="display: table-caption; caption-side: bottom; margin-top: -10px; margin-bottom: 10px; text-align: center; font-size: 14.4px !important; line-height: 25px !important;" class="wsite-caption">Our algorithm running on real hardware</span></span>
-<div class="paragraph" style="display: block; font-size: 21px !important; line-height: 30px !important;">TinyNets is a&nbsp;<span style="color: rgb(36, 41, 46); font-size: 21px !important; line-height: 30px !important;">networking
+<div class="paragraph" style="text-align: justify; display: block; font-size: 21px !important; line-height: 30px !important;">TinyNets is a&nbsp;<span style="color: rgb(36, 41, 46); font-size: 21px !important; line-height: 30px !important;">networking
  strategy for distributed robotic control systems developed by my team 
 and me in MIT's graduate computer science networking course. Our key 
 contributions are:</span><ul style="font-size: 21px !important; line-height: 30px !important;"><li style="font-size: 21px !important; line-height: 30px !important;">A strategy for stateless multipath routing that increases message delivery time determinism and network robustness.</li><li style="font-size: 21px !important; line-height: 30px !important;">A
@@ -458,14 +458,14 @@ metric) as well as historical hop-count for per-packet dynamic
 re-routing, that increases packet delivery-time determinism.</li><li style="font-size: 21px !important; line-height: 30px !important;">A
  software-defined network architecture for arbitrary implementation in 
 any embedded system, where computing, physical space, and time is 
-limited.</li></ul><br>At a high level, our protocol:<ul style="font-size: 21px !important; line-height: 30px !important;"><li style="font-size: 21px !important; line-height: 30px !important;">Implements a multipath distance-vector routing protocol</li><li style="font-size: 21px !important; line-height: 30px !important;">Performs real-time route selection</li><li style="font-size: 21px !important; line-height: 30px !important;">Does automatic, convergence-free route discovery and optimization</li><li style="font-size: 21px !important; line-height: 30px !important;">Is robust in the face of link losses and router failures</li><li style="font-size: 21px !important; line-height: 30px !important;">Can be arbitrarily implemented in software on numerous microcontrollers</li><li style="font-size: 21px !important; line-height: 30px !important;">Is open-source</li></ul><br>Below is an illustration of TinyNets on a simulated network:</div>
+limited.</li></ul><br>At a high level, our protocol:<ul style="font-size: 21px !important; line-height: 30px !important;"><li style="font-size: 21px !important; line-height: 30px !important;">Implements a multipath distance-vector routing protocol</li><li style="font-size: 21px !important; line-height: 30px !important;">Performs real-time route selection</li><li style="font-size: 21px !important; line-height: 30px !important;">Does automatic, convergence-free route discovery and optimization</li><li style="font-size: 21px !important; line-height: 30px !important;">Is robust in the face of link losses and router failures</li><li style="font-size: 21px !important; line-height: 30px !important;">Can be arbitrarily implemented in software on numerous microcontrollers</li><li style="font-size: 21px !important; line-height: 30px !important;">Is open-source</li></ul><br>Below is an illustration of TinyNets on a simulated network:<br></div>
 <hr style="width: 100%; clear: both; visibility: hidden; font-size: 16px !important;">
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
 <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/4Rnn4MHgGAw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-<div class="paragraph" style="font-size: 21px !important; line-height: 30px !important;">You can download the full project report <a href="http://www.mit.edu/~nselby/resources/report-tinynets.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a>. Download our code and CAD files to try it yourself on <a href="https://github.com/jakeread/tinynets" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">our GitHub repository</a>.</div>
+<div class="paragraph" style="text-align: justify; font-size: 21px !important; line-height: 30px !important;">You can download the full project report <a href="http://www.mit.edu/~nselby/resources/report-tinynets.pdf" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">here</a>. Download our code and CAD files to try it yourself on <a href="https://github.com/jakeread/tinynets" target="_blank" style="font-size: 21px !important; line-height: 30px !important;">our GitHub repository</a>.<br></div>
 			</div>
 		</div>
       </div>
