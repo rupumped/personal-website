@@ -75,6 +75,7 @@ if 'Selected' in fn:
 if 'About' in fn:
 	emDash = u'\u2014'.encode('utf-8')
 	content = content.replace('better--',"better{0}".format(emDash))
+	content = content.replace('openquote.html','openquote.png')
 
 fn = fn.replace(' - NICHOLAS S SELBY','').replace(' ','-').lower()
 if fn.endswith('home.html'):
