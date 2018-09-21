@@ -32,3 +32,21 @@
     transform: translateY(-50%);
   }
 }
+
+myblockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 500px;
+line-height: 1.45;
+}
+myblockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+margin-left: 7%;
+}
+myblockquote cite:before {
+content: "\2014 \2009";
+}

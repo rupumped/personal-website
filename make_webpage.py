@@ -73,7 +73,6 @@ if 'Selected' in fn:
 	content = content.replace('RUPUMPED','#drones #artificial-intelligence #global-health', 1)
 	content = content.replace('RUPUMPED','#global-health #humanitarian', 1)
 if 'About' in fn:
-	content = content.replace('alt','title')
 	emDash = u'\u2014'.encode('utf-8')
 	content = content.replace('better--',"better{0}".format(emDash))
 
