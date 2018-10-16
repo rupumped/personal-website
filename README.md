@@ -40,7 +40,7 @@ The next step is to host them on your webpage. For example, this is how to host 
 
 4. Log into your MIT Athena server:
 ```
-$ ssh athena.dialup.mit.edu -l nselby
+$ ssh athena.dialup.mit.edu -l username
 ```
 5. After entering your password, navigate to the forked repo and pull:
 ```
