@@ -13,7 +13,7 @@ $ mkdir downloads
 
 You will also need to clone the forked repo to the hosting service. For example, if you are using MIT Athena:
 ```
-$ ssh athena.dialup.mit.edu -l nselby
+$ ssh athena.dialup.mit.edu -l username
 ```
 Enter your password.
 ```
