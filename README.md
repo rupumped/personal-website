@@ -22,7 +22,7 @@ $ git clone address://of/forked/repo.git
 ```
 
 # How To Update Your Personal Website
-1. Navigate to your uncleaned personal page in Firefox. Save each page (including the resource folder) in the `personal-website/download` directory.
+1. Navigate to your uncleaned personal page in Firefox. Save each page (including the resource folder) in the `personal-website/downloads` directory.
 2. Navigate to the `personal-website` directory. Run the following command:
 ```
 $ ./batch_make.sh
